@@ -5,11 +5,11 @@ import Categories from '../components/Categories'
 
 
 
-const Home = () => {
+const Home = ({selectedCategoryState}) => {
     return (
         <View>
             <Header title="Titulo"/>
-            <Categories/>
+            <Categories selectedCategoryState={selectedCategoryState}/>
         
         </View>
     )
