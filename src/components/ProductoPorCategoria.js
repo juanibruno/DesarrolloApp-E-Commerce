@@ -4,7 +4,7 @@ import Colors from '../utils/globals/Colors';
 
 const ProductoPorCategoria = ({item}) => {
 
-    console.log(item);                                                   /* HASTA ACá LLEGAN LOS PRODUCTOS FILTRADOS; PERO NO SE RENDERIZAN  */
+
     return (
         <View style={styles.container}>
             <Text style={styles.text}>{item.id}{item.title}</Text>

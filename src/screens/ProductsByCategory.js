@@ -1,29 +1,25 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import { StyleSheet, View, Text, FlatList } from 'react-native'
 import Header from '../components/Header'
 import products from '../utils/data/products.json'
-import { useEffect, useState } from 'react'
-import ProductoPorCategoria from '../components/ProductoPorCategoria'
+
+
 
 
 
 const ProductsByCategory = ({ categorySelected }) => {
 
-  const [productsFiltered, setProductsFiltered] = useState([])
-
-  useEffect (() => {
-    setProductsFiltered(products.filter(product => product.category === categorySelected ))
-  },[categorySelected])
+console.log(products);
 
   return (
     <>
       <Header title={categorySelected} />
       <FlatList
         style={styles.container}
-        data={productsFiltered}
+        data={products}
         keyExtractor={item => item.id}
-        renderItem={({ item }) => <ProductoPorCategoria item={item}/>}
-      />
+        renderItem={({item}) => <View><Text>{item.title}</Text></View>}
 
+      />
     </>
   )
 }
@@ -31,3 +27,7 @@ const ProductsByCategory = ({ categorySelected }) => {
 export default ProductsByCategory
 
 const styles = StyleSheet.create({})
+
+
+
+

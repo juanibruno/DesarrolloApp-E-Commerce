@@ -13,23 +13,30 @@ const App = () => {
     setCategorySelected(category)
 
   }
+  useEffect(() => {
+    console.log(categorySelected);
+  }, [categorySelected])
 
 
-  
   return (
 
-    <>
-    {categorySelected ? 
-
-        <ProductsByCategory categorySelected={categorySelected}/> 
-
-        : 
-
-        <Home selectedCategoryState={selectedCategoryState}/>}
-    </>
+    <Home selectedCategoryState={selectedCategoryState} />
   )
 }
 
 export default App
 
 const styles = StyleSheet.create({})
+
+
+
+
+
+{/* <>
+      {categorySelected ?
+                <ProductsByCategory categorySelected={categorySelected} />
+                :
+                <Home selectedCategoryState={selectedCategoryState} />
+
+      }
+    </> */}

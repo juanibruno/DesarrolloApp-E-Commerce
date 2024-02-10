@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import Header from '../components/Header'
 import Categories from '../components/Categories'
 
@@ -9,8 +9,7 @@ const Home = ({selectedCategoryState}) => {
     return (
         <View>
             <Header title="Titulo"/>
-            <Categories selectedCategoryState={selectedCategoryState}/>
-        
+            <Categories selectedCategoryState={selectedCategoryState}/>      
         </View>
     )
 }
