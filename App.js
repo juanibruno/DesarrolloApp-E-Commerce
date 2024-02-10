@@ -13,14 +13,14 @@ const App = () => {
     setCategorySelected(category)
 
   }
-  useEffect(() => {
-    console.log(categorySelected);
-  }, [categorySelected])
-
+ 
 
   return (
 
-    <Home selectedCategoryState={selectedCategoryState} />
+    <>
+    {categorySelected ? <ProductsByCategory categorySelected={categorySelected}/> : <Home selectedCategoryState={selectedCategoryState} /> }
+    </>
+    
   )
 }
 

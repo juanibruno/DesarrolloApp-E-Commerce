@@ -6,21 +6,14 @@ import products from '../utils/data/products.json'
 
 
 
-const ProductsByCategory = ({ categorySelected }) => {
+const ProductsByCategory = () => {
 
-console.log(products);
+/* console.log(products); */
 
   return (
-    <>
-      <Header title={categorySelected} />
-      <FlatList
-        style={styles.container}
-        data={products}
-        keyExtractor={item => item.id}
-        renderItem={({item}) => <View><Text>{item.title}</Text></View>}
-
-      />
-    </>
+    <View>
+      <Text>PRODUCTOS POR CATEGORIA</Text>
+    </View>
   )
 }
 
