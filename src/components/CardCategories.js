@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-import ShadowPrimary from './wrappers/ShadowPrimary'
+import ShadowPrimary from './Wrappers/ShadowPrimary'
 import Colors from '../utils/globals/Colors'
 
 
