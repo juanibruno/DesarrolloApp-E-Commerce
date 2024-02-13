@@ -2,6 +2,7 @@ import { StyleSheet, FlatList, View, Text } from 'react-native'
 import Header from '../components/Header'
 import products from '../utils/data/products.json'
 import { useEffect, useState } from 'react'
+import ProductoPorCategoria from '../components/ProductoPorCategoria'
 
 
 
@@ -27,7 +28,7 @@ const [productsFiltered, setProductsFiltered] = useState ([])
       style={styles.container}
       data={productsFiltered}
       keyExtractor={item => item.id}
-      renderItem={({item}) => <View><Text>{item.title}</Text></View> }
+      renderItem={({item}) => <ProductoPorCategoria item={item}/>}
     />
    
    </>

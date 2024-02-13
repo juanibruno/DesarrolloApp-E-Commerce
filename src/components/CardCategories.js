@@ -4,6 +4,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native'
 import ShadowPrimary from '../components/Wrappers/ShadowPrimary'
 
 import Colors from '../utils/globals/Colors'
+import fonts from '../utils/globals/Fonts'
 
 
 const CardCategories = ({ item, selectedCategoryState }) => {
@@ -21,15 +22,17 @@ export default CardCategories
 const styles = StyleSheet.create({
 
     container: {
-        width: 150,   /* aca debería bajar el widht para que en app se vea tamaño ok */
+        width: "80%",  /* aca debería bajar el widht para que en app se vea tamaño ok */
         backgroundColor: Colors.secundary,
         marginHorizontal: '10%',
         marginVertical: 10,
-        padding: 5,
-        alignItems: 'center'
+        padding: 20,
+        alignItems: 'center',
+        borderRadius:10,
     },
     text: {
         fontSize: 18,
+        fontFamily: fonts.LobsterRegular
     },
 
 })

@@ -8,7 +8,7 @@ import Categories from '../components/Categories'
 const Home = ({selectedCategoryState}) => {
     return (
         <View>
-            <Header title="Titulo"/>
+            <Header title="App - J.I.B"/>
             <Categories selectedCategoryState={selectedCategoryState}/>      
         </View>
     )
