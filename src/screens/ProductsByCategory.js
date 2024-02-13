@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import products from '../utils/data/products.json'
 import { useEffect, useState } from 'react'
 import ProductoPorCategoria from '../components/ProductoPorCategoria'
+import Search from '../components/Search'
 
 
 
@@ -10,20 +11,31 @@ import ProductoPorCategoria from '../components/ProductoPorCategoria'
 
 const ProductsByCategory = ({categorySelected}) => {
 
-/* console.log(products); */
-
 const [productsFiltered, setProductsFiltered] = useState ([])
+const [keyword, setKeyword] = useState("")
+
+const handlerKeyword = (k) => {
+  setKeyword(k)
+}
 
   useEffect(() =>{
-    setProductsFiltered(products.filter(product => product.category === categorySelected))
-  },[categorySelected])
+    if (categorySelected) setProductsFiltered(products.filter(product => product.category === categorySelected))
+    if (keyword) setProductsFiltered(productsFiltered.filter(product => {
+      const productTitleLower = product.title.toLowerCase()
+      const keywordLower = keyword.toLowerCase()
+      return productTitleLower.includes(keywordLower)
+    }))
+  },[categorySelected, keyword])
+    
 
-  console.log(productsFiltered); /* funciona ok productsFiltered, ya que los muestra por consola  */
+  
 
 
   return (
    <>
     <Header title={categorySelected}/>
+    <Search handlerKeyword={handlerKeyword}/>
+    
     <FlatList
       style={styles.container}
       data={productsFiltered}

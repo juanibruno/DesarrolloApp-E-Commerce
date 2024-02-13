@@ -38,13 +38,3 @@ const styles = StyleSheet.create({})
 
 
 
-
-
-{/* <>
-      {categorySelected ?
-                <ProductsByCategory categorySelected={categorySelected} />
-                :
-                <Home selectedCategoryState={selectedCategoryState} />
-
-      }
-    </> */}

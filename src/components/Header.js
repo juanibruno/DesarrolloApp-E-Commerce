@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     },
     text:{
         fontSize:30,
+        marginTop:30,
         fontFamily:"Lobster-Regular"
 
     }
