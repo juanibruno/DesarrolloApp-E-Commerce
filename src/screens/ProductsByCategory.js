@@ -9,7 +9,7 @@ import Search from '../components/Search'
 
 
 
-const ProductsByCategory = ({categorySelected}) => {
+const ProductsByCategory = ({categorySelected, selectProductId}) => {
 
 const [productsFiltered, setProductsFiltered] = useState ([])
 const [keyword, setKeyword] = useState("")
@@ -40,7 +40,7 @@ const handlerKeyword = (k) => {
       style={styles.container}
       data={productsFiltered}
       keyExtractor={item => item.id}
-      renderItem={({item}) => <ProductoPorCategoria item={item}/>}
+      renderItem={({item}) => <ProductoPorCategoria selectProductId={selectProductId} item={item}/>}
     />
    
    </>

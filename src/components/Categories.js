@@ -1,15 +1,18 @@
-import { StyleSheet, FlatList } from 'react-native'
+import { StyleSheet, FlatList, ImageBackground } from 'react-native'
 import categories from '../utils/data/categories.json'
 import CardCategories from './CardCategories'
 
-const Categories = ({selectedCategoryState}) => {
+const Categories = ({ selectedCategoryState }) => {
     return (
+
         <FlatList
             data={categories}
             keyExtractor={item => item}
-            renderItem={({ item }) => <CardCategories item={item} selectedCategoryState={selectedCategoryState}/>}
+            renderItem={({ item }) => <CardCategories item={item} selectedCategoryState={selectedCategoryState} />}
         />
+
     )
+
 }
 
 export default Categories
