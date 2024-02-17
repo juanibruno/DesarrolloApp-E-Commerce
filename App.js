@@ -1,9 +1,11 @@
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, StatusBar } from 'react-native'
 import Home from './src/screens/Home'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import ProductsByCategory from './src/screens/ProductsByCategory'
 import { useFonts } from 'expo-font'
 import ProductDetail from './src/screens/ProductDetail'
+import Colors from './src/utils/globals/Colors'
+import Categories from './src/components/Categories'
 
 
 
@@ -14,34 +16,16 @@ const App = () => {
     "JosefinSans-Bold": require("./assets/fonts/JosefinSans-Bold.ttf"),
     "Lobster-Regular": require("./assets/fonts/Lobster-Regular.ttf")
   })
-  const [categorySelected, setCategorySelected] = useState("")
-  const [productId, setProductId] = useState(0)
-
+  
+  
   if (!fontsLoaded) return null
-
-  const selectedCategoryState = (category) => {
-    setCategorySelected(category)
-  }
-
-  const selectProductId = (id) => {
-    setProductId(id)
-  }
 
 
   return (
-
-    <View style={styles.container}>
-      {categorySelected ?
-        productId ?
-          <ProductDetail productId={productId} />
-          :
-          <ProductsByCategory
-            selectProductId={selectProductId}
-            categorySelected={categorySelected} />
-        :
-        <Home selectedCategoryState={selectedCategoryState} />}
-    </View>
-
+    <>
+    <StatusBar backgroundColor={Colors.secundary}/>
+   <ProductDetail productId={2}/>
+    </>
   )
 }
 

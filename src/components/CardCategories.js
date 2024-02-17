@@ -7,9 +7,9 @@ import Colors from '../utils/globals/Colors'
 import fonts from '../utils/globals/Fonts'
 
 
-const CardCategories = ({ item, selectedCategoryState }) => {
+const CardCategories = ({ item }) => {
     return (
-        <Pressable onPress={() => selectedCategoryState(item)}>
+        <Pressable onPress={() => console.log(item)}>
             <ShadowPrimary style={styles.container}>
                 <Text style={styles.text}>{item}</Text>
             </ShadowPrimary>

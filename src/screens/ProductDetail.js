@@ -20,7 +20,7 @@ const ProductDetail = ({ productId }) => {
       <View style={styles.content}>
         <Image
           style={styles.image}
-          source={{ uri:product.thumbnail } }
+          source={{ uri:product?.images ? product.images[2] : null } }
           resizeMode='cover'
         />
         <View style={styles.containerText}>
@@ -28,7 +28,7 @@ const ProductDetail = ({ productId }) => {
           <Text>{product.description}</Text>
         </View>
         <View style={styles.containerPrice}>
-        <Text style={styles.price}>{product.price}</Text>
+        <Text style={styles.price}>$ {product.price}</Text>
         <Pressable style={styles.buyNow}>
         <Text style={styles.buyNowText}>Buy Now</Text>
         </Pressable>
@@ -46,8 +46,9 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     flex: 1,
-    justifyContent: "flex-start",
-    alignItems: "center"
+    justifyContent: "start",
+    alignItems: "center",
+    
 
   },
   content: {
