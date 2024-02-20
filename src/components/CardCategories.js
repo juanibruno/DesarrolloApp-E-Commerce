@@ -1,15 +1,13 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-
-
 import ShadowPrimary from '../components/Wrappers/ShadowPrimary'
-
 import Colors from '../utils/globals/Colors'
 import fonts from '../utils/globals/Fonts'
 
 
-const CardCategories = ({ item }) => {
+const CardCategories = ({item,navigation}) => {
+
     return (
-        <Pressable onPress={() => console.log(item)}>
+        <Pressable onPress={() => navigation.navigate("ProductsByCategory",{categorySelected:item})}>
             <ShadowPrimary style={styles.container}>
                 <Text style={styles.text}>{item}</Text>
             </ShadowPrimary>

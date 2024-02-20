@@ -2,12 +2,12 @@ import { StyleSheet, Text, Image, Pressable } from 'react-native'
 import Colors from '../utils/globals/Colors';
 
 
-const ProductoPorCategoria = ({item}) => {
+const ProductoPorCategoria = ({item, navigation}) => {
 
 
     return (
         
-        <Pressable onPress={() => console.log(item.id)} style={styles.container}>
+        <Pressable onPress={() => navigation.navigate("ProductDetail", {productId:item.id})} style={styles.container}>
             <Image style={styles.image} source={{uri:item.thumbnail}}/>
             <Text style={styles.text}>{item.id} {item.title}</Text>
         </Pressable>
