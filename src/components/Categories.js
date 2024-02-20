@@ -5,6 +5,7 @@ import CardCategories from './CardCategories'
 const Categories = ({navigation}) => {
 
     return (
+
         <FlatList
             data={categories}
             keyExtractor={item => item}
