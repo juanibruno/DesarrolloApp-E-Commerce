@@ -1,5 +1,4 @@
-import { StyleSheet, FlatList, ImageBackground } from 'react-native'
-import Header from '../components/Header'
+import { StyleSheet, FlatList } from 'react-native'
 import products from '../utils/data/products.json'
 import { useEffect, useState } from 'react'
 import ProductoPorCategoria from '../components/ProductoPorCategoria'
@@ -8,7 +7,7 @@ import Search from '../components/Search'
 
 const ProductsByCategory = ({ navigation, route }) => {
 
-  const { categorySelected } = route.params
+  const {categorySelected} = route.params
   const [productsFiltered, setProductsFiltered] = useState([])
   const [keyword, setKeyword] = useState("")
 

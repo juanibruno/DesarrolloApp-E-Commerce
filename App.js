@@ -1,14 +1,9 @@
-import { StyleSheet, View, StatusBar } from 'react-native'
-import Home from './src/screens/Home'
-import { useState } from 'react'
-import ProductsByCategory from './src/screens/ProductsByCategory'
+import { StatusBar } from 'expo-status-bar'
 import { useFonts } from 'expo-font'
-import ProductDetail from './src/screens/ProductDetail'
 import Colors from './src/utils/globals/Colors'
-import Categories from './src/components/Categories'
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Header from './src/components/Header'
+import MainNavigator from './src/navigation/MainNavigator'
+
+
 
 
 
@@ -19,7 +14,7 @@ const App = () => {
     "Lobster-Regular": require("./assets/fonts/Lobster-Regular.ttf")
   })
 
-  const Stack = createNativeStackNavigator()
+ 
 
   if (!fontsLoaded) return null
 
@@ -27,37 +22,14 @@ const App = () => {
   return (
     <>
       <StatusBar backgroundColor={Colors.secundary} />
-      <NavigationContainer>
-        <Stack.Navigator
-          initialRouteName='Home'
-          screenOptions={({route, navigation})=>{
-            return{
-              header: () => {
-                return <Header
-                          navigation={navigation} 
-                          title={route.name === "Home" ? "Categorias" :
-                          route.name === "ProductsByCategory" ? route.params.categorySelected : "Detalle"}/>
-              }
-            }
-          }}
-        >
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="ProductsByCategory" component={ProductsByCategory} />
-          <Stack.Screen name="ProductDetail" component={ProductDetail} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <MainNavigator />
     </>
   )
 }
 
 export default App
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
 
-  }
-})
 
 
 

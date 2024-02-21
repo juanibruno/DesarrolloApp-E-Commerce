@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 
   container: {
     backgroundColor: Colors.primary,
-    height: 80,
+    height: 100,
     width: "100%",
     justifyContent: "center",
     alignItems: "center",
@@ -31,13 +31,17 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 30,
-    marginTop: 15,
+    marginTop: 30,
     fontFamily: "Lobster-Regular"
 
   },
   goBack: {
     position: "absolute",
-    left: 15
+    left: 15,
+    padding:5,
+    marginBottom:25,
+    paddingTop:25
+    
   }
 
 })
