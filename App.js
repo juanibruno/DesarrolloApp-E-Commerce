@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <>
-      <StatusBar backgroundColor={Colors.secundary} />
+      <StatusBar backgroundColor={Colors.tercero} />
       <MainNavigator />
     </>
   )
