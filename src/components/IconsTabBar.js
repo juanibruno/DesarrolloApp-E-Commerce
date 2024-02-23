@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
 import { AntDesign } from '@expo/vector-icons'
+import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 
-const IconsTabBar = ({ title, nameIcon }) => {
+const IconsTabBar = ({ title, nameIcon, focused }) => {
     return (
         <View style={styles.container}>
-            <AntDesign name={nameIcon} size={25} color="black"/>
-            <Text style={styles.text}>{title}</Text>
+            <AntDesign name={nameIcon} size={25} color={focused ? Colors.primary : "black"}/>
+            <Text style={[styles.text, !focused && styles.textFocused]}>{title}</Text>
         </View>
     )
 }
@@ -18,8 +19,11 @@ const styles = StyleSheet.create({
         alignItems:"center"
     },
     text:{
-        color:"black",
+        color:Colors.primary,
         textAlign: "center",
         fontSize:11
+    },
+    textFocused:{
+        color: "black"
     }
 })

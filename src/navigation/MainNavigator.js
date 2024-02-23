@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import ShopStack from './ShopStack'
@@ -28,19 +28,25 @@ const MainNavigator = () => {
                 <Tab.Screen name="ShopStack"
                     component={ShopStack}
                     options={{
-                        tabBarIcon: () => <IconsTabBar title="Productos" nameIcon="folderopen"/>
+                        tabBarIcon: ({focused}) => <IconsTabBar title="Productos" 
+                                                                nameIcon="folderopen" 
+                                                                focused={focused}/>
                     }}
                 />
                 <Tab.Screen name="CartStack"
                     component={CartStack}
                     options={{
-                        tabBarIcon: () => <IconsTabBar title="Carrito" nameIcon="shoppingcart" />
+                        tabBarIcon: ({focused}) => <IconsTabBar title="Carrito" 
+                                                                nameIcon="shoppingcart" 
+                                                                focused={focused} />
                     }}
                 />
                 <Tab.Screen name="OrdersStack"
                     component={OrdersStack}
                     options={{
-                        tabBarIcon: () => <IconsTabBar title="Ordenes" nameIcon="profile" />
+                        tabBarIcon: ({focused}) => <IconsTabBar title="Ordenes"
+                                                                nameIcon="profile"
+                                                                focused={focused}/>
                     }}
                 />
             </Tab.Navigator>
@@ -53,7 +59,7 @@ export default MainNavigator
 const styles = StyleSheet.create({
     tabBar: {
         backgroundColor: Colors.tercero,
-        height: 80,
+        height: 100,
         width: "auto",
         position: "absolute",
         left: 20,
