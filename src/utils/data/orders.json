@@ -1,0 +1,77 @@
+[
+    {
+        "total": 1949,
+        "id": 1,
+        "userId": 9640,
+        "createAt": 1234456444445,
+        "items": [
+            {
+                "id": 1,
+                "quantity": 1,
+                "title": "iPhone 9",
+                "description": "An apple mobile which is nothing like apple",
+                "price": 700,
+                "discountPercentage": 12.96,
+                "rating": 4.69,
+                "stock": 94,
+                "brand": "Apple",
+                "category": "smartphones",
+                "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+                "images": [
+                    "https://i.dummyjson.com/data/products/1/1.jpg",
+                    "https://i.dummyjson.com/data/products/1/2.jpg",
+                    "https://i.dummyjson.com/data/products/1/3.jpg",
+                    "https://i.dummyjson.com/data/products/1/4.jpg",
+                    "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+                ]
+            }
+        ]
+    },
+    {
+        "total": 4510,
+        "id": 2,
+        "userId": 9640,
+        "createAt": 9934456118101,
+        "items": [
+            {
+                "id": 10,
+                "quantity": 1,
+                "title": "HP Pavilion 15-DK1056WM",
+                "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+                "price": 1099,
+                "discountPercentage": 6.18,
+                "rating": 4.43,
+                "stock": 89,
+                "brand": "HP Pavilion",
+                "category": "laptops",
+                "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+                "images": [
+                    "https://i.dummyjson.com/data/products/10/1.jpg",
+                    "https://i.dummyjson.com/data/products/10/2.jpg",
+                    "https://i.dummyjson.com/data/products/10/3.jpg",
+                    "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+                ]
+            },
+            {
+                "id": 13,
+                "quantity": 3,
+                "title": "Fog Scent Xpressio Perfume",
+                "description": "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
+                "price": 150,
+                "discountPercentage": 8.14,
+                "rating": 4.59,
+                "stock": 61,
+                "brand": "Fog Scent Xpressio",
+                "category": "fragrances",
+                "thumbnail": "https://i.dummyjson.com/data/products/13/thumbnail.webp",
+                "images": [
+                    "https://i.dummyjson.com/data/products/13/1.jpg",
+                    "https://i.dummyjson.com/data/products/13/2.png",
+                    "https://i.dummyjson.com/data/products/13/3.jpg",
+                    "https://i.dummyjson.com/data/products/13/4.jpg",
+                    "https://i.dummyjson.com/data/products/13/thumbnail.webp"
+                ]
+            }
+        ]
+    }
+]

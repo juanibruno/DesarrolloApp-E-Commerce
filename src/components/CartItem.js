@@ -1,18 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground } from 'react-native'
 import Colors from '../utils/globals/Colors'
 import { AntDesign } from '@expo/vector-icons'
 import Fonts from '../utils/globals/Fonts'
 
+
 const CartItem = ({ item }) => {
     return (
-        <View style={styles.card}>
-            <View style={styles.textContainer}>
-                <Text style={styles.text}>{item.title}</Text>
-                <Text style={styles.text2}>{item.brand}</Text>
-                <Text style={styles.text2}>{item.price}</Text>
+        
+            <View style={styles.card}>
+                <View style={styles.textContainer}>
+                    <Text style={styles.text}>{item.title}</Text>
+                    <Text style={styles.text2}>{item.brand}</Text>
+                    <Text style={styles.text2}>{item.price}</Text>
+                </View>
+                <AntDesign name="delete" size={30} color="black" />
             </View>
-            <AntDesign name="delete" size={30} color="black" />
-        </View>
+       
     )
 }
 
@@ -22,7 +25,7 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: Colors.tercero,
         padding: 20,
-        margin:5,
+        margin: 5,
         borderWidth: 2,
         borderRadius: 10,
         flexDirection: "row",
@@ -40,6 +43,11 @@ const styles = StyleSheet.create({
     },
     text2: {
 
+    },
+    background:{
+        flex: 1,
+    width: '100%',
+    height: '100%'
     }
 
 })
