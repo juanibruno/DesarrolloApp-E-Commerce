@@ -22,6 +22,7 @@ const CartItem = ({ item }) => {
 export default CartItem
 
 const styles = StyleSheet.create({
+
     card: {
         backgroundColor: Colors.tercero,
         padding: 10,
@@ -38,13 +39,16 @@ const styles = StyleSheet.create({
         
     },
     text: {
-        color: Colors.tercero,
-        fontSize: 18,
         fontFamily: Fonts.JosefinSansBold,
+        color: "black",
+        fontSize: 18,
+        
     },
     text2: {
         fontFamily: Fonts.JosefinSansBold,
         margin:1,
+        color: "black",
+        fontSize:14,
         
     },
     background: {
