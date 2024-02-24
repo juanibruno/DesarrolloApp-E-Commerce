@@ -26,7 +26,7 @@ export default OrderItem
 
 const styles = StyleSheet.create({
     card:{
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.tercero,
         margin:10,
         borderWidth:2,
         borderRadius:10,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
       },
       textContainer:{
         width:"70%",
-        padding:10,
+        padding:5,
       },
       text:{
         fontSize:17,

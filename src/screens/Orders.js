@@ -2,6 +2,7 @@ import { StyleSheet, FlatList, ImageBackground } from 'react-native'
 import orders from '../utils/data/orders.json'
 import OrderItem from '../components/OrderItem'
 import Colors from '../utils/globals/Colors'
+import Counter from '../components/Counter'
 
 
 const Orders = () => {
@@ -16,6 +17,7 @@ const Orders = () => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <OrderItem order={item} />}
       />
+      <Counter/>
     </ImageBackground>
   )
 }

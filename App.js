@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar'
 import { useFonts } from 'expo-font'
 import Colors from './src/utils/globals/Colors'
 import MainNavigator from './src/navigation/MainNavigator'
+import { store } from './src/app/store'
+import { Provider } from 'react-redux'
 
 
 
@@ -14,7 +16,7 @@ const App = () => {
     "Lobster-Regular": require("./assets/fonts/Lobster-Regular.ttf")
   })
 
- 
+
 
   if (!fontsLoaded) return null
 
@@ -22,7 +24,9 @@ const App = () => {
   return (
     <>
       <StatusBar backgroundColor={Colors.tercero} />
-      <MainNavigator />
+      <Provider store={store}>
+        <MainNavigator />
+      </Provider>
     </>
   )
 }
