@@ -1,10 +1,13 @@
 import { Pressable, StyleSheet, Text, View, FlatList, ImageBackground } from 'react-native'
-import cart from '../utils/data/cart.json'
+
 import CartItem from '../components/CartItem'
 import Fonts from '../utils/globals/Fonts'
+import { useSelector } from 'react-redux'
 
 
 const Cart = () => {
+
+    const cart = useSelector((state)=> state.cart)
 
     return (
         <ImageBackground
@@ -35,7 +38,7 @@ export default Cart
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 5,
+        padding: 0,
         gap: 5,
         justifyContent: "space-between",
         marginBottom: 130
