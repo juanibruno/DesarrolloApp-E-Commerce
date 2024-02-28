@@ -1,5 +1,4 @@
 import { Pressable, StyleSheet, Text, View, FlatList, ImageBackground } from 'react-native'
-
 import CartItem from '../components/CartItem'
 import Fonts from '../utils/globals/Fonts'
 import { useSelector } from 'react-redux'

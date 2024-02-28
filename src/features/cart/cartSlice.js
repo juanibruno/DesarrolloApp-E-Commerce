@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { loadAsync } from "expo-font";
+
 
 
 const initialState = {
@@ -12,8 +12,8 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addCArtItem: (state, actions) => {
-            const index = state.items.findIndex((item) => item.id === actions.payload.id)
-            if (index === -1) {
+            const existingItem = state.items.some((item) => item.id === actions.payload.id)
+            if (!existingItem) {
                 state.items = [...state.items, { ...actions.payload, quantity: 1 }]
             } else {
                 state.items = state.items.map((item) => {
@@ -24,13 +24,13 @@ export const cartSlice = createSlice({
                 })
             }
 
-            state.total = state.items.reduce((acc, item) => acc = acc + item.price, 0)
+            state.total = state.items.reduce((acc, item) => acc = acc + (item.price * item.quantity),0 )
             
 
         },
         deleteCartItem: (state, actions) => {
             state.items = state.items.filter((item) => item.id !== actions.payload)
-            state.total = state.items.reduce((acc, item) => acc = acc + item.price, 0)
+            state.total = state.items.reduce((acc, item) => acc = acc + (item.price * item.quantity),0)
         }
     }
 })

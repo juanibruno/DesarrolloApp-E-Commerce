@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ImageBackground, Pressable } from 'react-native'
+import { StyleSheet, Text, View , Pressable } from 'react-native'
 import Colors from '../utils/globals/Colors'
 import { AntDesign } from '@expo/vector-icons'
 import Fonts from '../utils/globals/Fonts'
