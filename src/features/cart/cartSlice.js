@@ -12,6 +12,7 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addCArtItem: (state, actions) => {
+            
             const existingItem = state.items.some((item) => item.id === actions.payload.id)
             if (!existingItem) {
                 state.items = [...state.items, { ...actions.payload, quantity: 1 }]

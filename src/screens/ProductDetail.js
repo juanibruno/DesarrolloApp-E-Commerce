@@ -10,6 +10,7 @@ const ProductDetail = ({ route }) => {
   const dispatch = useDispatch()
   const { productId } = route.params
   const { data: product, isLoading } = useGetProductQuery(productId)
+  
 if (isLoading) return null
 
   return (
