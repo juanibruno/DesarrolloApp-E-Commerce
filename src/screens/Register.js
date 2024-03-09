@@ -8,17 +8,17 @@ import { useRegisterMutation } from '../app/services/auth'
 
 
 
-const Register = ({ navigation, route }) => {
+const Register = ({ navigation }) => {
 
-    const {setIdToken } = route.params
+    /*  const {setIdToken } = route.params */
     const [email, setEmail] = useState("")
     const [password, setPasword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [triggerRegister] = useRegisterMutation()
 
-    const onSubmit = async () => {
-    const {data} = await triggerRegister({ email, password })
-    setIdToken(data.idToken)
+    const onSubmit = () => {
+        triggerRegister({ email, password })
+
     }
 
 
