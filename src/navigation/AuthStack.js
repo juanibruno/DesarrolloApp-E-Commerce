@@ -8,8 +8,8 @@ const Stack = createNativeStackNavigator()
 
 import React from 'react'
 
-const AuthStack = () => {
-    
+const AuthStack = ({setIdToken}) => {
+
     return (
         <Stack.Navigator
             initialRouteName='Login'
@@ -24,7 +24,7 @@ const AuthStack = () => {
             }}
         >
             <Stack.Screen name='Login' component={Login} />
-            <Stack.Screen name='Register' component={Register} />
+            <Stack.Screen name='Register' component={Register} initialParams={{setIdToken}} />
         </Stack.Navigator>
     )
 }
