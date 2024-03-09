@@ -16,8 +16,9 @@ const Register = ({ navigation }) => {
     const [confirmPassword, setConfirmPassword] = useState("")
     const [triggerRegister] = useRegisterMutation()
 
-    const onSubmit = () => {
-        triggerRegister({ email, password })
+    const onSubmit = async () => {
+        const {data} = await triggerRegister({ email, password })
+        console.log(data.idToken)
 
     }
 
