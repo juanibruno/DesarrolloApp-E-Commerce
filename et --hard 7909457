@@ -1,0 +1,37 @@
+[33m1591c2f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD^
+[33m7909457[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{1}: commit: hasta el break de Login&Aut
+[33m1591c2f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{2}: commit: sigo sin avanzar el error de createApi
+[33m5d190f8[m HEAD@{3}: commit: todavia sin mejorar el error
+[33m80c79f8[m HEAD@{4}: commit: hasta antes del error de productsByCategory
+[33m8c13814[m HEAD@{5}: pull: Merge made by the 'ort' strategy.
+[33m12ef5c3[m HEAD@{6}: commit: avance de rkt
+[33m4703fda[m HEAD@{7}: reset: moving to HEAD^
+[33mc5fdb6d[m HEAD@{8}: commit: rtk query
+[33m4703fda[m HEAD@{9}: commit: http&firebase
+[33mf25a571[m HEAD@{10}: commit: nueva pre-entrega
+[33m33006df[m HEAD@{11}: commit: actualización carrito
+[33m4755d77[m HEAD@{12}: commit: mejoras en cart
+[33m736f88f[m HEAD@{13}: commit: reducer/dispatches
+[33mf067b7a[m HEAD@{14}: commit: orders
+[33ma5809a2[m HEAD@{15}: commit: carrito
+[33mc075def[m HEAD@{16}: commit: iconos
+[33me792094[m HEAD@{17}: commit: TabBar
+[33me345433[m HEAD@{18}: commit: mejoras en rutas/stacks
+[33m1692aee[m HEAD@{19}: commit: navegacion 2
+[33m28408d8[m HEAD@{20}: commit: navegacion
+[33m0c7b2aa[m HEAD@{21}: commit: navigation 1
+[33m7beaf30[m HEAD@{22}: commit: avance con productDetail
+[33mdfb34f7[m HEAD@{23}: commit: buscador, expresiones regulares y filtrado
+[33maeb02a0[m HEAD@{24}: commit: IMG y fuentes
+[33mcbc150e[m HEAD@{25}: commit: nuevaCorreccion 2da pre-entrega
+[33m952df14[m HEAD@{26}: commit (merge): correccion 2da preentrega
+[33md2b72af[m HEAD@{27}: commit: correccion 2da preEntrega
+[33m8566bcd[m HEAD@{28}: reset: moving to HEAD^
+[33mc2c21c4[m HEAD@{29}: commit: intento de correccion de ShadowPrimary
+[33m8566bcd[m HEAD@{30}: commit: 2da PRE-ENTREGA
+[33m562d6ce[m HEAD@{31}: commit: commit 2da pre-entrega
+[33mb9a3d30[m HEAD@{32}: commit: intentando corregir error ProductsByCategory
+[33md349699[m HEAD@{33}: commit: e-commerce-useEffect
+[33m37b903e[m HEAD@{34}: commit: con error de renderizado en ProductoPorCategoria
+[33m2888ebb[m HEAD@{35}: Branch: renamed refs/heads/master to refs/heads/main
+[33m2888ebb[m HEAD@{37}: commit (initial): clase 1 ecommerce

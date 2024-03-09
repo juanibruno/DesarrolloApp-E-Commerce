@@ -9,6 +9,7 @@ const Stack = createNativeStackNavigator()
 import React from 'react'
 
 const AuthStack = () => {
+    
     return (
         <Stack.Navigator
             initialRouteName='Login'

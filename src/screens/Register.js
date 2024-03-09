@@ -1,20 +1,22 @@
 import { Pressable, StyleSheet, Text, View, ImageBackground, isSecure } from 'react-native'
-import { useState } from 'react'
-import Colors from '../utils/globals/Colors'
 import InputForm from '../components/InputForm'
 import SubmitButton from '../components/SubmitButton'
+import { useState } from 'react'
+import Colors from '../utils/globals/Colors'
 import fonts from '../utils/globals/Fonts'
+import { useRegisterMutation } from '../app/services/auth'
 
 
 
 const Register = ({ navigation }) => {
+
     const [email, setEmail] = useState("")
     const [password, setPasword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
+    const [triggerRegister] = useRegisterMutation()
 
     const onSubmit = () => {
-        console.log(email),
-        console.log(password);
+        triggerRegister({ email, password })
     }
 
 

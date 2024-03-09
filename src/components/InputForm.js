@@ -4,6 +4,7 @@ import fonts from '../utils/globals/Fonts'
 
 
 const InputForm = ({ label, value, onChangeText, isSecure, error }) => {
+    
     return (
         <View style={styles.inputContainer}>
             <Text style={styles.titleInput}>{label}</Text>

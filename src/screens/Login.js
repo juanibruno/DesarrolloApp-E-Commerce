@@ -8,6 +8,7 @@ import fonts from '../utils/globals/Fonts'
 
 
 const Login = ({ navigation }) => {
+    
     const [email, setEmail] = useState("")
     const [password, setPasword] = useState("")
 
